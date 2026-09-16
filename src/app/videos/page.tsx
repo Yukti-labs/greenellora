@@ -80,7 +80,7 @@ export default function VideosPage() {
                     onClick={() => setSelectedCategory(category)}
                     className={`rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-all duration-300 cursor-pointer ${
                       selectedCategory === category
-                        ? "bg-primary text-white shadow-md border border-transparent"
+                        ? "bg-primary text-black shadow-md border border-transparent"
                         : "border border-border bg-surface text-body hover:border-primary hover:bg-primary/5"
                     }`}
                   >
