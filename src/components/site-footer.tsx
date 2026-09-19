@@ -104,7 +104,7 @@ export function SiteFooter() {
             <li>
               <span className="footer-contact-item items-start">
                 <MapPin className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                <span>123, Export Hub, Surat,<br />Gujarat, India – 395010</span>
+                <span>Chandol, Buldhana<br />Maharashtra, India – 443001</span>
               </span>
             </li>
           </ul>

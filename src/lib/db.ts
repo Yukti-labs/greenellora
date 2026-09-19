@@ -9,11 +9,12 @@ function getMongoUri(): string {
     );
   }
 
-  if (/localhost|127\.0\.0\.1/i.test(uri)) {
-    throw new Error(
-      "MONGODB_URI must point to a managed cloud database; local MongoDB is not supported by this deployment."
-    );
-  }
+  // Allow localhost for development
+  // if (/localhost|127\.0\.0\.1/i.test(uri)) {
+  //   throw new Error(
+  //     "MONGODB_URI must point to a managed cloud database; local MongoDB is not supported by this deployment."
+  //   );
+  // }
 
   return uri;
 }
