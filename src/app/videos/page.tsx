@@ -78,11 +78,7 @@ export default function VideosPage() {
                     key={category}
                     type="button"
                     onClick={() => setSelectedCategory(category)}
-                    className={`rounded-full px-5 py-2.5 text-xs font-semibold tracking-wide transition-all duration-300 cursor-pointer ${
-                      selectedCategory === category
-                        ? "bg-primary text-white shadow-md border border-transparent"
-                        : "border border-border bg-surface text-body hover:border-primary hover:bg-primary/5"
-                    }`}
+                    className={`video-filter-chip${selectedCategory === category ? " is-active" : ""}`}
                   >
                     {category}
                   </button>

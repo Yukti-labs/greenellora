@@ -737,6 +737,32 @@ h1, h2, h3, h4, .font-serif {
   padding-block: 4rem;
 }
 
+.video-filter-chip {
+  border-radius: 9999px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--body);
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-filter-chip:hover {
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 5%, var(--surface));
+}
+
+.video-filter-chip.is-active,
+.video-filter-chip.is-active:hover {
+  background: var(--primary);
+  color: #000000;
+  border-color: transparent;
+  box-shadow: var(--shadow-card);
+}
+
 /* ── Cards ── */
 .surface-card,
 .glass-card {
@@ -1104,7 +1130,7 @@ h1, h2, h3, h4, .font-serif {
 .site-footer {
   background: var(--primary-dark);
   color: rgba(255, 255, 255, 0.85);
-  text-align: center;
+  text-align: left;
 }
 
 .site-footer .brand-logo {
@@ -2270,15 +2296,6 @@ textarea.input-field {
 
 .footer-contact-item:hover {
   color: rgba(255,255,255,0.9);
-}
-
-.footer-links-col:last-child {
-  align-items: center;
-  text-align: center;
-}
-
-.footer-links-col:last-child .footer-contact-item {
-  justify-content: center;
 }
 
 .footer-bottom {
