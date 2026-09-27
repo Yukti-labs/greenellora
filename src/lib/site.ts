@@ -50,7 +50,7 @@ export const siteConfig = {
     "Green Ellora exports premium-grade organic spices, superfoods, herbal products, and agro commodities from India. Certified quality, custom packaging, and reliable worldwide logistics for global buyers and distributors.",
   url: "https://www.greenellora.com",
   email: "hello@greenellora.com",
-  phone: "+91 8390237966",
+  phone: "+91 7350073404",
   location: "India",
   keywords: [
     "Green Ellora",

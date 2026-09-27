@@ -132,7 +132,7 @@ export default function VideosPage() {
                 </p>
                 <div className="mt-8 flex justify-center">
                   <a
-                    href="https://www.youtube.com/@GreenEllora"
+                    href="https://www.youtube.com/@Farm2Foreign"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button-primary text-sm bg-white text-primary-dark hover:bg-accent-soft hover:text-primary-dark shadow-xl"
