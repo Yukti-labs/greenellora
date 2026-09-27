@@ -40,7 +40,7 @@ export function VideoSlider({ videos, title, description, viewAllHref }: VideoSl
     return () => window.removeEventListener("resize", updateItemsPerView);
   }, []);
 
-  const maxIndex = Math.max(0, videos.length - Math.ceil(itemsPerView));
+  const maxIndex = Math.max(0, videos.length - Math.floor(itemsPerView));
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
@@ -67,6 +67,10 @@ export function VideoSlider({ videos, title, description, viewAllHref }: VideoSl
     setTouchStart(0);
     setTouchEnd(0);
   };
+
+  useEffect(() => {
+    setCurrentIndex((prev) => Math.min(prev, maxIndex));
+  }, [maxIndex]);
 
   useEffect(() => {
     if (videos.length <= Math.floor(itemsPerView)) return;
@@ -103,7 +107,7 @@ export function VideoSlider({ videos, title, description, viewAllHref }: VideoSl
             className="overflow-hidden py-4 px-1"
           >
             <div
-              className="flex items-stretch gap-6 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+              className="flex items-stretch transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
               style={{
                 transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
               }}
@@ -111,8 +115,8 @@ export function VideoSlider({ videos, title, description, viewAllHref }: VideoSl
               {videos.map((video) => (
                 <div
                   key={video.id || video.youtubeId}
-                  className="flex w-full flex-shrink-0 self-stretch"
-                  style={{ flexBasis: `calc((100% - ${(itemsPerView - 1) * 24}px) / ${itemsPerView})`, maxWidth: `calc((100% - ${(itemsPerView - 1) * 24}px) / ${itemsPerView})` }}
+                  className="flex w-full flex-shrink-0 self-stretch pr-6"
+                  style={{ flexBasis: `${100 / itemsPerView}%`, maxWidth: `${100 / itemsPerView}%` }}
                 >
                   <VideoCard
                     title={video.title}
